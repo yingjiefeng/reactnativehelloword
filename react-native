@@ -1,0 +1,22 @@
+1.eclipse mac 工程转android studio 工程
+
+输出index.android.bundle
+index.android.js
+
+1masterfgj:reactdemp master$ react-native bundle --entry-file index.android.js --bundle-output ./assets/index.android.bundle --platform android --assets-dest ./res/ --dev false
+
+
+2.react-native不能生成index.android.bundle
+
+  继上篇配置react-native Android环境，在运行新创建的项目时，会出现手机红色屏幕，注意这里实在真机上，模拟器上不知道，没有进行测试。并且提示不能连接到server端。
+
+  解决办法
+
+  在项目目录下
+  react-native start > /dev/null 2>&1 &
+  adb reverse tcp:8081 tcp:8081
+
+  create an assets folder under android/app/src/main
+  curl
+  “http://localhost:8081/index.android.bundle?platform=android” -o “android/app/src/main/assets/index.android.bundle”
+  注意curl是下载的命令，意思是下载index.android.bundle文件，然后放在assets文件夹中，这个在mac中是可以的！windows下不确定！
