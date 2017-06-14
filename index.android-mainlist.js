@@ -92,14 +92,21 @@ var helloworld = React.createClass({
 
 
 var MainListView = React.createClass({
-    //onPress={() => this.props.navigator.push(params)}
-    // onPressNext() {
+    // onPress={() => this.props.navigator.push(params)}
+    // onPressNext:function(){
+    //     var modulename = '';
+    //     console.log("onPressNext"+modulename);
     //     this.props.navigator.push({name: modulename});
+    //
     // },
 
-
+    getInitialState: function () {
+        return {
+            modulename:''
+        };
+    },
     render() {
-        let children = [];
+        // let children = [];
         var index = [{
             'bundle': 'index.android-hello.bundle',
             'jsname': 'index.android-hello.js',
@@ -109,28 +116,37 @@ var MainListView = React.createClass({
             'jsname': 'index.android-image.js',
             'modulename': 'android-image'
         },
-        {
-            'bundle': 'index.android-json.bundle',
-            'jsname': 'index.android-json.js',
-            'modulename': 'android-json'
-        }];
+            {
+                'bundle': 'index.android-json.bundle',
+                'jsname': 'index.android-json.js',
+                'modulename': 'android-json'
+            }];
 
-        for (var i = 0; i < index.length; i++) {
-            var modulename = index[i].modulename;
-            var params = {
-                name: modulename
-            }
-            console.log('modulename==' + modulename);
-            children.push(
-                <View key={index[i].bundle}>
-                    <Text style={{fontSize: 16, color: '#ff00ff', margin: 10}}
-                          onPress={() => this.props.navigator.push(params)}>{index[i].modulename}</Text>
-                </View>);
-        }
+
+        // for (var i = 0; i < index.length; i++) {
+        //     var modulename = index[i].modulename;
+        //     var item = <View key={index[i].bundle}>
+        //         <Text style={{fontSize: 16, color: '#ff00ff', margin: 10}}
+        //               onPress={() => this.props.navigator.push({name:modulename})}>{index[i].modulename}</Text>
+        //     </View>;
+        //     children.push(item);
+        // }
 
         return (
-            <ScrollView  >
-                {children}
+            <ScrollView>
+
+                <View key={index[0].bundle}>
+                    <Text style={{fontSize: 16, color: '#ff00ff', margin: 10}}
+                          onPress={() => this.props.navigator.push({name:index[0].modulename})}>{index[0].modulename}</Text>
+                </View>
+                <View key={index[1].bundle}>
+                    <Text style={{fontSize: 16, color: '#ff00ff', margin: 10}}
+                          onPress={() => this.props.navigator.push({name:index[1].modulename})}>{index[1].modulename}</Text>
+                </View>
+                <View key={index[2].bundle}>
+                    <Text style={{fontSize: 16, color: '#ff00ff', margin: 10}}
+                          onPress={() => this.props.navigator.push({name:index[2].modulename})}>{index[2].modulename}</Text>
+                </View>
             </ScrollView>
         );
     }
