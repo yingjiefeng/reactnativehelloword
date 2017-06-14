@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "react": "^15.2.1",
-    "react-native": "^0.31.0"
+    "react-native": "^0.31.0",
+    "react-navigation": "^1.0.0-beta.11"
   }
 }
