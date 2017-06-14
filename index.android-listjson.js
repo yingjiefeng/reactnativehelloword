@@ -1,12 +1,10 @@
 
 
-
-    /**listview 动态加载网络数据
-     * http://www.cnblogs.com/daomul/p/5122754.html
-     * Sample React Native App
-     * https://github.com/facebook/react-native
-     */
-    'use strict';
+/**react  解析json listview
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ */
+'use strict';
 
 
 var React = require('react');
@@ -57,7 +55,7 @@ var helloworld = React.createClass({
                     autoCapitalize='none'
                     autoCorrect={false}
                     placeholder='search forr git project...ss'
-                    onChange={this.onSearchChange}
+                    onChange={this.getByFetch}
                     style={styles.searchView}
                 >
                 </TextInput>
@@ -86,21 +84,39 @@ var helloworld = React.createClass({
             .done();
     },
 
+    getByFetch : function(event){
+        fetch('http://facebook.github.io/react-native/movies.json')
+            .then((response) => response.json())
+            .then((responseJson) => {
+                if (responseJson.movies) {
+                    this.setState({
+                        dataSource : this.state.dataSource.cloneWithRows(responseJson.movies)
+                    });
+                }
+
+            })
+            .catch((error) => {
+                console.error(error);
+            }).done();
+
+    },
+
     //渲染列表中的每一行数据
     renderRow: function(item) {
         return (
             <View>
                 <View  style={styles.row}>
                     <Image
-                        source={{uri:item.owner.avatar_url}}
-                        style={styles.Img}>
-                    </Image>
+                        source={require('./img/favicon.png')}
+                        style={styles.Img}
+                    />
+
                     <View>
                         <Text style={styles.name}>
-                            {item.full_name}
+                            {item.title}
                         </Text>
                         <Text style={styles.name}>
-                            Star:{item.stargazers_count}
+                            Star:{item.releaseYear}
                         </Text>
                     </View>
                 </View>

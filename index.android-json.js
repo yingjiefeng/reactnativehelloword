@@ -1,12 +1,6 @@
-
-
-
-    /**listview 动态加载网络数据
-     * http://www.cnblogs.com/daomul/p/5122754.html
-     * Sample React Native App
-     * https://github.com/facebook/react-native
-     */
-    'use strict';
+/**React 解析Json
+ */
+'use strict';
 
 
 var React = require('react');
@@ -37,10 +31,8 @@ var helloworld = React.createClass({
     render: function() {
         var listViewContent;
         if (this.state.dataSource.getRowCount() === 0) {
-            listViewContent =
-                <Text>
-                    there's nothing to search , please have another key to tap.
-                </Text>;
+            listViewContent = <Text></Text>;
+            this.getByFetch();
         } else {
             listViewContent =
                 <ListView
@@ -51,39 +43,34 @@ var helloworld = React.createClass({
                     keyboardShouldPersistTaps={true}
                     showsVerticalScrollIndicator={true} />
         }
+
+
         return (
             <View style={styles.container}>
-                <TextInput
-                    autoCapitalize='none'
-                    autoCorrect={false}
-                    placeholder='search forr git project...ss'
-                    onChange={this.onSearchChange}
-                    style={styles.searchView}
-                >
-                </TextInput>
+                <Text>React 解析Json</Text>
                 {listViewContent}
             </View>
         );
     },
 
-    /*-- private method --*/
 
-    //点击搜索响应数据请求
-    onSearchChange: function(event) {
-        var serarchText = event.nativeEvent.text.toLowerCase();
-        var queryURL = GIT_URL + encodeURIComponent(serarchText);
 
-        fetch(queryURL)
+    getByFetch : function(){
+        fetch('http://facebook.github.io/react-native/movies.json')
             .then((response) => response.json())
-            .then((responseData) => {
-                console.warn('serarchText======'+serarchText);
-                if (responseData.items) {
+            .then((responseJson) => {
+                console.warn('getByFetch=====');
+                if (responseJson.movies) {
                     this.setState({
-                        dataSource : this.state.dataSource.cloneWithRows(responseData.items)
+                        dataSource : this.state.dataSource.cloneWithRows(responseJson.movies)
                     });
                 }
+
             })
-            .done();
+            .catch((error) => {
+                console.error(error);
+            }).done();
+
     },
 
     //渲染列表中的每一行数据
@@ -92,15 +79,16 @@ var helloworld = React.createClass({
             <View>
                 <View  style={styles.row}>
                     <Image
-                        source={{uri:item.owner.avatar_url}}
-                        style={styles.Img}>
-                    </Image>
+                        source={require('./img/favicon.png')}
+                        style={styles.Img}
+                    />
+
                     <View>
                         <Text style={styles.name}>
-                            {item.full_name}
+                            {item.title}
                         </Text>
                         <Text style={styles.name}>
-                            Star:{item.stargazers_count}
+                            Star:{item.releaseYear}
                         </Text>
                     </View>
                 </View>
