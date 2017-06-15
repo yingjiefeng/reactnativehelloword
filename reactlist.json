@@ -3,7 +3,7 @@
   "description": "react native android bundle list",
   "list": [
     { "bundleAssetName": "index.android.bundle", "jSMainModuleName": "index.android","moduleName":"helloworld"},
-    { "bundleAssetName": "index.android-hello.bundle", "jSMainModuleName": "index.android-hello","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-hello.bundle", "jSMainModuleName": "index.android-hello","moduleName":"HelloWorldApp"},
     { "bundleAssetName": "index.android-highlight.bundle", "jSMainModuleName": "index.android-highlight","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-image.bundle", "jSMainModuleName": "index.android-image","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-json.bundle", "jSMainModuleName": "index.android-json","moduleName":"helloworld"},
@@ -21,6 +21,7 @@
     { "bundleAssetName": "index.android-statusbar.bundle", "jSMainModuleName": "index.android-statusbar","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-switch.bundle", "jSMainModuleName": "index.android-switch","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-textinput.bundle", "jSMainModuleName": "index.android-textinput","moduleName":"helloworld"},
-    { "bundleAssetName": "index.android-toolbar.bundle", "jSMainModuleName": "index.android-toolbar","moduleName":"helloworld"}
+    { "bundleAssetName": "index.android-toolbar.bundle", "jSMainModuleName": "index.android-toolbar","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-toastnativeandroid.bundle", "jSMainModuleName": "index.android-toastnativeandroid","moduleName":"helloworld"}
   ]
 }
