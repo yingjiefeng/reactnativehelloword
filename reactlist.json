@@ -2,7 +2,7 @@
   "title": "react native android",
   "description": "react native android bundle list",
   "list": [
-    { "bundleAssetName": "index.android.bundle", "jSMainModuleName": "index.android","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android.bundle", "jSMainModuleName": "index.android","moduleName":"SimpleVideoView"},
     { "bundleAssetName": "index.android-hello.bundle", "jSMainModuleName": "index.android-hello","moduleName":"HelloWorldApp"},
     { "bundleAssetName": "index.android-highlight.bundle", "jSMainModuleName": "index.android-highlight","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-image.bundle", "jSMainModuleName": "index.android-image","moduleName":"helloworld"},
@@ -23,6 +23,9 @@
     { "bundleAssetName": "index.android-textinput.bundle", "jSMainModuleName": "index.android-textinput","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-toolbar.bundle", "jSMainModuleName": "index.android-toolbar","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-toastnativeandroid.bundle", "jSMainModuleName": "index.android-toastnativeandroid","moduleName":"helloworld"},
-    { "bundleAssetName": "index.android-circleview.bundle", "jSMainModuleName": "index.android-circleview","moduleName":"AndroidNativeModule"}
+    { "bundleAssetName": "index.android-circleview.bundle", "jSMainModuleName": "index.android-circleview","moduleName":"AndroidNativeModule"},
+    { "bundleAssetName": "index.android-videoview.bundle", "jSMainModuleName": "index.android-videoview","moduleName":"SimpleVideoView"},
+    { "bundleAssetName": "index.android-rctvideoview.bundle", "jSMainModuleName": "index.android-rctvideoview","moduleName":"VideoPlayScene"}
+
   ]
 }
