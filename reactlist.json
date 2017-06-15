@@ -22,6 +22,7 @@
     { "bundleAssetName": "index.android-switch.bundle", "jSMainModuleName": "index.android-switch","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-textinput.bundle", "jSMainModuleName": "index.android-textinput","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-toolbar.bundle", "jSMainModuleName": "index.android-toolbar","moduleName":"helloworld"},
-    { "bundleAssetName": "index.android-toastnativeandroid.bundle", "jSMainModuleName": "index.android-toastnativeandroid","moduleName":"helloworld"}
+    { "bundleAssetName": "index.android-toastnativeandroid.bundle", "jSMainModuleName": "index.android-toastnativeandroid","moduleName":"helloworld"},
+    { "bundleAssetName": "index.android-circleview.bundle", "jSMainModuleName": "index.android-circleview","moduleName":"AndroidNativeModule"}
   ]
 }
