@@ -25,7 +25,8 @@
     { "bundleAssetName": "index.android-toastnativeandroid.bundle", "jSMainModuleName": "index.android-toastnativeandroid","moduleName":"helloworld"},
     { "bundleAssetName": "index.android-circleview.bundle", "jSMainModuleName": "index.android-circleview","moduleName":"AndroidNativeModule"},
     { "bundleAssetName": "index.android-videoview.bundle", "jSMainModuleName": "index.android-videoview","moduleName":"SimpleVideoView"},
-    { "bundleAssetName": "index.android-rctvideoview.bundle", "jSMainModuleName": "index.android-rctvideoview","moduleName":"VideoPlayScene"}
+    { "bundleAssetName": "index.android-rctvideoview.bundle", "jSMainModuleName": "index.android-rctvideoview","moduleName":"VideoPlayScene"},
+    { "bundleAssetName": "index.android-rctimageview.bundle", "jSMainModuleName": "index.android-rctimageview","moduleName":"helloworld"}
 
   ]
 }
