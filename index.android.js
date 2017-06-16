@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-//引入这个模块
+/**
+ * Created by master on 17/6/16.
+ */
+/**
+ * Created by mengqingdong on 2017/4/19.
+ */
+import React from 'react';
+import {
+    AppRegistry
+} from 'react-native';
 
-import ImageView from './ImageView';
-class Bananas extends Component {
-    render() {
-        return (
-            <ImageView src= "http://i.imgur.com/UePbdph.jpg"  style={{width: 400, height: 400}}/>
-        );
-    }
-}
+import App from  './App'
 
-AppRegistry.registerComponent('helloworld', () => Bananas);
+AppRegistry.registerComponent('FlatListDemo', () => App);
