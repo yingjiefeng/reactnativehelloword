@@ -7,7 +7,7 @@ import {
     View
 } from 'react-native';
 
-
+ 
 export default class SectionListView extends Component {
     state: {dataSource: any};
 
